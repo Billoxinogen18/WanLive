@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_overlay"
+
+
+    android:orientation="vertical"
+
+
+    >
+
+    <EditText
+
+
+        android:id="@+id/field_phone_number"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:background="@color/black_overlay"
+        android:layout_marginTop="45dp"
+        android:inputType="phone"
+        android:textColorHint="#ffffff"
+        android:hint="Phone Number"
+        android:text=""/>
+
+    <EditText
+        android:id="@+id/field_verification_code"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:background="@color/black_overlay"
+        android:layout_below="@+id/field_phone_number"
+        android:layout_marginTop="22dp"
+        android:inputType="number"
+        android:textColorHint="#ffffff"
+        android:hint="Verification"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/animesm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.5"
+        android:background="@drawable/animes"
+        android:scaleType="fitXY" />
+
+
+
+    <Button
+        android:id="@+id/button_start_verification"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/field_verification_code"
+        android:layout_marginTop="42dp"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/button_verify_phone"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_start_verification"
+        android:layout_alignEnd="@+id/field_verification_code"
+        android:layout_alignRight="@+id/field_verification_code"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:text="Verify" />
+
+    <ImageButton
+        android:id="@+id/button_resend"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/field_phone_number"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/field_verification_code"
+        android:layout_toRightOf="@+id/field_verification_code"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/retry" />
+
+
+</RelativeLayout>
